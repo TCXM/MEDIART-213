@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Learning to fold, together</title>
+  <desc id="desc">A student straightens a sleeve while a two-armed robot holds the shirt on a workbench. Folded towels, tools and a repair diagram make this a community workshop.</desc>
+  <rect width="1200" height="800" fill="#e8e4d4"/>
+  <rect y="590" width="1200" height="210" fill="#d4d8bf"/>
+  <path d="M0 590H1200M180 800L390 590M880 800L820 590" stroke="#b7bfa7" stroke-width="2"/>
+  <rect x="75" y="70" width="300" height="245" rx="75" fill="#a3b7a1"/>
+  <rect x="88" y="83" width="274" height="219" rx="65" fill="#f2edcf"/>
+  <path d="M89 261Q170 176 249 245T362 224V302H89Z" fill="#c5cea9"/>
+  <path d="M224 84V302M89 198H361" stroke="#a3b7a1" stroke-width="8"/>
+  <rect x="530" y="77" width="242" height="179" rx="5" fill="#f4eddc" stroke="#b6bda5" stroke-width="3"/>
+  <g fill="none" stroke="#83977b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M567 196L599 145L643 167L692 119"/>
+    <circle cx="599" cy="145" r="10" fill="#f4eddc"/><circle cx="643" cy="167" r="10" fill="#f4eddc"/>
+    <path d="M684 119H702V140"/>
+  </g>
+  <path d="M563 225H728" stroke="#c6b88e" stroke-width="5" stroke-dasharray="10 9"/>
+  <rect x="853" y="83" width="246" height="220" rx="5" fill="#c6cbb3"/>
+  <g fill="#829476">
+    <circle cx="879" cy="109" r="2"/><circle cx="911" cy="109" r="2"/><circle cx="943" cy="109" r="2"/><circle cx="975" cy="109" r="2"/><circle cx="1007" cy="109" r="2"/><circle cx="1039" cy="109" r="2"/><circle cx="1071" cy="109" r="2"/>
+    <circle cx="879" cy="279" r="2"/><circle cx="911" cy="279" r="2"/><circle cx="943" cy="279" r="2"/><circle cx="975" cy="279" r="2"/><circle cx="1007" cy="279" r="2"/><circle cx="1039" cy="279" r="2"/><circle cx="1071" cy="279" r="2"/>
+  </g>
+  <g stroke="#71836c" stroke-linecap="round" fill="none">
+    <path d="M893 146V219" stroke-width="11"/><path d="M879 140H907" stroke-width="9"/>
+    <path d="M954 149L977 217M971 143L944 217" stroke-width="8"/>
+    <path d="M1040 151V227" stroke-width="10"/><path d="M1027 143Q1039 158 1053 143" stroke-width="9"/>
+  </g>
+  <g>
+    <path d="M223 494L208 672M309 493L340 672" stroke="#435c4d" stroke-width="34" stroke-linecap="round"/>
+    <path d="M198 343Q252 302 316 345L335 506H182Z" fill="#ba8664"/>
+    <circle cx="256" cy="281" r="45" fill="#c79674"/>
+    <path d="M211 280Q196 211 253 217Q309 211 306 279L281 249L218 258Z" fill="#43594a"/>
+    <path d="M206 362L171 425L293 477" fill="none" stroke="#c79674" stroke-width="24" stroke-linecap="round"/>
+    <path d="M305 360L349 416L459 451" fill="none" stroke="#c79674" stroke-width="24" stroke-linecap="round"/>
+  </g>
+  <g>
+    <rect x="832" y="343" width="161" height="201" rx="30" fill="#efefdd" stroke="#80917a" stroke-width="5"/>
+    <rect x="859" y="304" width="105" height="65" rx="25" fill="#f1f0de" stroke="#80917a" stroke-width="4"/>
+    <rect x="877" y="325" width="69" height="19" rx="9" fill="#71866f"/>
+    <circle cx="896" cy="334" r="4" fill="#eee8cc"/><circle cx="929" cy="334" r="4" fill="#eee8cc"/>
+    <path d="M860 529L857 652M963 529L976 652" stroke="#7d8f75" stroke-width="24" stroke-linecap="round"/>
+    <path d="M832 389L758 360L681 450M990 390L1045 421L910 469" fill="none" stroke="#85987b" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="#e9ead5" stroke="#73886e" stroke-width="4"><circle cx="758" cy="360" r="16"/><circle cx="1045" cy="421" r="16"/></g>
+    <path d="M681 450L670 467M681 450L693 466M910 469L901 486M910 469L924 482" fill="none" stroke="#597253" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <path d="M224 472H1012L1064 547H170Z" fill="#c8ac80"/>
+  <rect x="171" y="546" width="893" height="22" rx="6" fill="#a48560"/>
+  <path d="M220 568L199 733M1014 568L1030 733" stroke="#90775a" stroke-width="18" stroke-linecap="round"/>
+  <path d="M498 449L552 469H615L672 446L713 483L674 515L640 496V536H518V496L475 510L414 467L438 446L490 475Z" fill="#a1b2a3" stroke="#718d7a" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M554 469Q580 491 612 469M575 490V530" fill="none" stroke="#7c9783" stroke-width="3"/>
+  <path d="M420 433Q451 410 480 431" fill="none" stroke="#a88855" stroke-width="3" stroke-dasharray="8 6"/>
+  <path d="M472 421L481 432L466 434" fill="none" stroke="#a88855" stroke-width="3"/>
+  <g stroke="#ab8d67" stroke-width="2"><rect x="772" y="508" width="137" height="13" rx="4" fill="#ded0a8"/><rect x="779" y="494" width="122" height="13" rx="4" fill="#c4cba8"/><rect x="787" y="480" width="108" height="13" rx="4" fill="#e4d3ac"/></g>
+  <rect x="90" y="647" width="65" height="67" rx="4" fill="#b68b66"/>
+  <path d="M122 648V577M122 626Q87 580 95 568Q133 582 122 626M122 618Q160 569 166 586Q164 613 122 618" fill="#809971" stroke="#809971" stroke-width="4"/>
+</svg>

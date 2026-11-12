@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the shared spaces and community website of an imagined human–robot neighborhood in 2040.">
+    <title>Our Community — Living Together</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="future.css">
+    <script src="assets/vendor/p5.min.js" defer></script>
+    <script src="community-sketch.js" defer></script>
+</head>
+<body class="future-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <nav class="site-nav" aria-label="Main navigation">
+        <a class="wordmark" href="index.html">Living Together<span>FIELD NOTES FROM 2040</span></a>
+        <div class="nav-links">
+            <a href="index.html">My vision</a>
+            <a href="day.html">An ordinary day</a>
+            <a href="community.html" aria-current="page">Our community</a>
+        </div>
+    </nav>
+
+    <header class="page-header future-header">
+        <p class="eyebrow">02 / OUR COMMUNITY · AN IMAGINED FUTURE</p>
+        <h1>A neighborhood,<br><em>not a showroom.</em></h1>
+        <div class="header-bottom">
+            <p class="intro">Shared robots. Shared knowledge. A place to cook, learn, and gather, without needing to own the technology.</p>
+            <p class="margin-note">Built around people.<br>Connected by a small,<br>useful community website.</p>
+        </div>
+        <figure class="scene-figure">
+            <img id="sketch-fallback" src="assets/images/neighborhood.svg" width="1200" height="650" alt="Illustrated neighborhood with a shared kitchen, a repair workshop, a courtyard garden, people, and a small delivery robot connected by walking paths.">
+            <div id="community-sketch" class="community-sketch" hidden></div>
+            <figcaption><span>A few shared places, within walking distance.</span><span>Original speculative illustration · p5.js</span></figcaption>
+        </figure>
+        <div class="sketch-controls" id="sketch-controls" hidden>
+            <div class="destination-controls" role="group" aria-label="Choose the delivery robot's destination">
+                <button type="button" data-destination="kitchen" aria-pressed="true">To the kitchen</button>
+                <button type="button" data-destination="workshop" aria-pressed="false">To the workshop</button>
+                <button type="button" data-destination="garden" aria-pressed="false">To the garden</button>
+            </div>
+            <button type="button" id="motion-toggle">Pause animation</button>
+            <p id="sketch-status" class="sketch-status" role="status">A delivery robot is bringing ingredients to the kitchen.</p>
+            <p class="sketch-help">Choose a destination and watch a small delivery unfold while neighbors walk and gather. An imagined scene, not a robotics simulation.</p>
+        </div>
+        <nav class="time-nav" aria-label="Explore the community">
+            <a href="#places">Shared places</a>
+            <a href="#noticeboard">Community noticeboard</a>
+            <a href="#questions">Still figuring it out</a>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="future-section" id="places" aria-labelledby="places-title">
+            <p class="eyebrow">THE PHYSICAL SIDE</p>
+            <h2 id="places-title">Spaces for doing things together.</h2>
+            <div class="place-list">
+                <article>
+                    <a class="place-picture" href="day.html#morning" aria-label="Visit the shared kitchen"><img src="assets/images/shared-kitchen.svg" width="1200" height="650" alt="Neighbors preparing breakfast with a tray-carrying robot." loading="lazy"></a>
+                    <span class="place-number">A / COOK</span><h3>The shared kitchen</h3><p>Adjustable counters, shared recipes, and help with the heavy lifting.</p><a class="text-link" href="day.html#morning">See breakfast here →</a>
+                </article>
+                <article>
+                    <a class="place-picture" href="day.html#afternoon" aria-label="Visit the repair workshop"><img src="assets/images/workshop.svg" width="1200" height="800" alt="A student and a robot working on a shirt together." loading="lazy"></a>
+                    <span class="place-number">B / LEARN</span><h3>The repair workshop</h3><p>Learn a skill. Fix something. Meet the people who keep it all running.</p><a class="text-link" href="day.html#afternoon">Meet the learners →</a>
+                </article>
+                <article>
+                    <a class="place-picture" href="day.html#evening" aria-label="Visit the courtyard"><img src="assets/images/shared-evening.svg" width="1200" height="800" alt="A courtyard dinner with neighbors, plants, and a dish-carrying robot." loading="lazy"></a>
+                    <span class="place-number">C / GATHER</span><h3>The courtyard</h3><p>Wide paths, planting beds, and a table with room for another neighbor.</p><a class="text-link" href="day.html#evening">Stay for dinner →</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="future-section board-section" id="noticeboard" aria-labelledby="board-title">
+            <div class="section-heading"><div><p class="eyebrow">THE DIGITAL SIDE</p><h2 id="board-title">On the neighborhood board.</h2></div><span class="board-stamp">THURSDAY / 2040</span></div>
+            <p class="section-intro">A small, useful internet that leads back to shared life. Fictional posts, not live bookings.</p>
+            <figure class="connection-picture">
+                <img src="assets/images/community-connection.svg" width="1200" height="400" alt="Three connected scenes: a resident checks a community post on a tablet, a neighbor offers a skill through the board, and people meet at a workshop table with a robot." loading="lazy">
+                <figcaption><span>01 / Find a need</span><span>02 / Offer a skill</span><span>03 / Meet in person</span></figcaption>
+            </figure>
+            <div class="notice-list">
+                <article class="notice"><p class="notice-tag">LEND A HAND</p><h3>Soup night needs a few cooks.</h3><p>We can move the pots. Can you bring a recipe?</p><p class="notice-meta">Mei · Kitchen · 17:00</p><details><summary>Read the invitation</summary><p>Bring a recipe, help chop, or simply join us for dinner. Seated preparation stations are available. In this imagined community, residents sign up online or with the kitchen host.</p><a class="text-link" href="day.html#morning">See how we cook together →</a></details></article>
+                <article class="notice"><p class="notice-tag">LEARN SOMETHING</p><h3>Teach a robot to fold a towel.</h3><p>Bring a towel and a little patience. No coding needed.</p><p class="notice-meta">Student team · Workshop · 14:00</p><details><summary>What would we learn?</summary><p>Try a demonstration, watch where the robot struggles, and compare ways of arranging the fabric. The goal is to understand its abilities, not pretend it can already handle every garment.</p><a class="text-link" href="day.html#afternoon">Visit the workshop →</a></details></article>
+                <article class="notice"><p class="notice-tag">KEEP THINGS GOING</p><h3>A wheel needs replacing.</h3><p>Meet a technician and see how a shared robot is repaired.</p><p class="notice-meta">Maintenance team · Workshop · 16:00</p><details><summary>Who keeps it running?</summary><p>Paid technicians handle repairs, supported by a shared maintenance budget. Residents can learn alongside them, but volunteering is not a replacement for wages. A small loan cart covers deliveries during the repair.</p></details></article>
+            </div>
+            <p class="board-footnote">Not online? The same notices are printed at the kitchen entrance. A community host can help you join an activity.</p>
+        </section>
+
+        <section class="future-section" id="questions" aria-labelledby="questions-title">
+            <p class="eyebrow">A FUTURE WE WOULD KEEP WORKING ON</p>
+            <h2 id="questions-title">Living together takes more than good machines.</h2>
+            <div class="questions-layout">
+                <p class="large-note">The interesting question is not only “What can a robot do?”<br><em>It is “What can we do together?”</em></p>
+                <div class="open-questions">
+                    <details><summary>Who gets to use the robots?</summary><p>In this proposal, basic access comes through a community membership with reduced fees for people who need them. It is a starting idea, not a solved funding model. Residents would need to decide together what is affordable and fair.</p></details>
+                    <details><summary>What happens to people's work?</summary><p>Robots could reduce some heavy and repetitive tasks. That does not automatically mean better jobs. I imagine paid training and maintenance roles, with workers involved in deciding which tasks change and how the benefits are shared.</p></details>
+                    <details><summary>Does everything need to become automated?</summary><p>No. Cooking, gardening, and making things can be enjoyable. The community offers assistance without making efficiency the measure of every activity. Doing something by hand still has a place.</p></details>
+                </div>
+            </div>
+        </section>
+
+        <section class="reflection-panel" aria-labelledby="reflection-title">
+            <p class="eyebrow">DESIGNER'S NOTE / WEEK 2 &amp; 3</p>
+            <h2 id="reflection-title">Why I imagined this place.</h2>
+            <p>Not a prediction or a finished solution. A robotics student's sketch of a community worth building.</p>
+            <details class="assignment-reflection">
+                <summary>Read the full reflection · 335 words</summary>
+                <p>My project imagines a neighborhood in 2040 where people and robots share ordinary tasks. As a robotics student, I am interested in what happens after a robot leaves the lab and becomes part of everyday life. I did not want to make robots look like either perfect replacements for people or threats to society. Instead, I focused on cooking, folding clothes, repairing equipment, and gathering for dinner.</p>
+                <p>This future is meant to support residents with different abilities and resources, especially older people who find physical tasks difficult, busy caregivers, and students who want to learn practical skills. Shared robots could let people participate in activities they might otherwise miss. A resident who cannot lift a heavy pot can still help decide how a meal tastes. For me, that is more meaningful than simply making cooking faster.</p>
+                <p>The community website connects the physical spaces. Its noticeboard helps neighbors find activities, offer knowledge, and understand when equipment needs maintenance. I imagined a small, useful internet that leads people back into shared life, rather than keeping them scrolling. Printed notices and a community host offer another way to participate.</p>
+                <p>I used cream backgrounds, green accents, serif headings, and original scene illustrations to make the future feel familiar and lived in. The first new page follows one day; the second explains the places and cooperation behind it. Consistent navigation, time links, and next-page invitations guide that journey. Flexbox allows scenes and notices to rearrange on smaller screens. Expandable notes let visitors explore details without overwhelming the main story. A small p5.js scene lets visitors choose a delivery destination while neighbors move around the community. A pause button and reduced motion support keep the animation optional.</p>
+                <p>Designing this world also meant considering who pays for equipment and who maintains it. I included reduced fees, paid technicians, and training as possible approaches, not complete solutions. My responsibility as a designer is to make those questions visible while showing a future where technology gives more people a way to contribute and belong.</p>
+            </details>
+            <a class="text-link" href="reflection.md" download>Download reflection as Markdown ↓</a>
+        </section>
+
+        <aside class="next-page" aria-labelledby="return-title">
+            <div><p class="eyebrow">BACK / THE PEOPLE BEHIND THE IDEA</p><h2 id="return-title">A shared future starts with ordinary hopes.</h2><p>Friendship, learning, and a little more time for each other.</p></div>
+            <a class="button-link" href="index.html">Return to my vision <span aria-hidden="true">→</span></a>
+        </aside>
+    </main>
+    <footer><span>Living Together / Future Telling · MEDIART 213</span><a href="day.html">Spend another day here ↑</a></footer>
+</body>
+</html>

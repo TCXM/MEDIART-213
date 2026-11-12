@@ -1,0 +1,11 @@
+# Living Together — Assignment Reflection
+
+My project imagines a neighborhood in 2040 where people and robots share ordinary tasks. As a robotics student, I am interested in what happens after a robot leaves the lab and becomes part of everyday life. I did not want to make robots look like either perfect replacements for people or threats to society. Instead, I focused on cooking, folding clothes, repairing equipment, and gathering for dinner.
+
+This future is meant to support residents with different abilities and resources, especially older people who find physical tasks difficult, busy caregivers, and students who want to learn practical skills. Shared robots could let people participate in activities they might otherwise miss. A resident who cannot lift a heavy pot can still help decide how a meal tastes. For me, that is more meaningful than simply making cooking faster.
+
+The community website connects the physical spaces. Its noticeboard helps neighbors find activities, offer knowledge, and understand when equipment needs maintenance. I imagined a small, useful internet that leads people back into shared life, rather than keeping them scrolling. Printed notices and a community host offer another way to participate.
+
+I used cream backgrounds, green accents, serif headings, and original scene illustrations to make the future feel familiar and lived in. The first new page follows one day; the second explains the places and cooperation behind it. Consistent navigation, time links, and next-page invitations guide that journey. Flexbox allows scenes and notices to rearrange on smaller screens. Expandable notes let visitors explore details without overwhelming the main story. A small p5.js scene lets visitors choose a delivery destination while neighbors move around the community. A pause button and reduced motion support keep the animation optional.
+
+Designing this world also meant considering who pays for equipment and who maintains it. I included reduced fees, paid technicians, and training as possible approaches, not complete solutions. My responsibility as a designer is to make those questions visible while showing a future where technology gives more people a way to contribute and belong.

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
+  <title id="title">From an online notice to a shared activity</title>
+  <desc id="desc">A resident reads a post on a tablet, another shares knowledge through the community board, and they meet at a physical workshop table with a robot.</desc>
+  <rect width="1200" height="400" rx="8" fill="#e9eadb"/>
+  <path d="M30 335H1170" stroke="#c3cbb2" stroke-width="2"/>
+  <g fill="none" stroke="#a4b18d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M301 150Q361 87 424 142M408 136L426 143L418 126"/>
+    <path d="M716 142Q776 87 836 150M820 144L839 152L830 132"/>
+  </g>
+  <g>
+    <rect x="73" y="217" width="88" height="91" rx="5" fill="#b59a74"/>
+    <path d="M85 307V334M149 307V334" stroke="#927c5c" stroke-width="8"/>
+    <path d="M122 253L165 297L218 301" fill="none" stroke="#50694f" stroke-width="18" stroke-linecap="round"/>
+    <path d="M105 153Q127 141 152 157L164 251H96Z" fill="#c09770"/>
+    <circle cx="129" cy="119" r="28" fill="#cda17d"/>
+    <path d="M101 116Q92 82 128 85Q159 82 159 119L145 102L108 104Z" fill="#56684c"/>
+    <path d="M150 173L180 212L213 189" fill="none" stroke="#cda17d" stroke-width="16" stroke-linecap="round"/>
+    <path d="M204 152L262 158L251 220L196 214Z" fill="#779076"/>
+    <path d="M212 164L252 169L245 202L207 198Z" fill="#f0ecd8"/>
+    <path d="M216 176L243 180M215 185L235 188" stroke="#b1c09c" stroke-width="4"/>
+    <path d="M273 287V223M273 262Q243 228 249 218Q282 227 273 262M273 256Q300 224 305 236Q302 257 273 256" stroke="#87a075" stroke-width="4" fill="#87a075"/>
+    <path d="M254 280H294L288 318H260Z" fill="#b38d66"/>
+  </g>
+  <g>
+    <rect x="451" y="89" width="225" height="198" rx="13" fill="#809878"/>
+    <rect x="463" y="103" width="201" height="169" rx="5" fill="#f1edda"/>
+    <rect x="478" y="119" width="171" height="16" rx="3" fill="#b5c6a2"/>
+    <rect x="478" y="149" width="48" height="47" rx="4" fill="#c7d0b0"/>
+    <path d="M491 171H512M502 160V182" stroke="#6f8b65" stroke-width="4"/>
+    <path d="M539 156H644M539 170H623M539 184H634" stroke="#bec5ac" stroke-width="5" stroke-linecap="round"/>
+    <rect x="478" y="210" width="48" height="45" rx="4" fill="#dfc8a0"/>
+    <path d="M489 232L499 242L516 222" stroke="#9e835e" stroke-width="4" fill="none"/>
+    <path d="M539 219H644M539 234H621M539 248H636" stroke="#bec5ac" stroke-width="5" stroke-linecap="round"/>
+    <path d="M548 288V319M582 288V319M520 320H609" stroke="#809878" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="704" cy="246" r="19" fill="#c69372"/>
+    <path d="M688 269Q705 259 719 273L727 318H678Z" fill="#9baa86"/>
+    <path d="M686 281L667 264" stroke="#c69372" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  <g>
+    <path d="M904 250L896 321M942 250L955 321" stroke="#52674f" stroke-width="17" stroke-linecap="round"/>
+    <path d="M895 162Q921 149 946 167L953 253H884Z" fill="#be906b"/>
+    <circle cx="919" cy="130" r="28" fill="#c89775"/>
+    <path d="M892 127Q887 93 918 95Q952 92 949 133L934 112L897 115Z" fill="#4c634a"/>
+    <path d="M943 180L970 213L1000 205" stroke="#c89775" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <path d="M910 260H1155" stroke="#b89a71" stroke-width="14" stroke-linecap="round"/>
+    <path d="M929 267L921 335M1137 267L1145 335" stroke="#9f8966" stroke-width="10"/>
+    <path d="M994 239L1032 220L1068 239L1030 256Z" fill="#a3b9a3"/>
+    <rect x="1087" y="173" width="56" height="79" rx="15" fill="#f1eedb" stroke="#80947a" stroke-width="3"/>
+    <rect x="1096" y="184" width="38" height="13" rx="6" fill="#789170"/>
+    <path d="M1090 215L1063 203L1049 225" fill="none" stroke="#80947a" stroke-width="9" stroke-linecap="round"/>
+    <path d="M1100 252V279M1130 252V279" stroke="#80947a" stroke-width="10"/>
+    <path d="M1049 224L1044 232M1049 224L1056 231" stroke="#607857" stroke-width="4"/>
+  </g>
+</svg>
