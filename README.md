@@ -1,30 +1,30 @@
-# Living Together
+# Common Ground
 
-**MEDIART 213 · Week 2 & 3 A2: Future Telling**
+An interactive atlas of an imagined city in 2040, shared by people and robots.
 
-An imagined neighborhood in 2040 where people and robots cook, learn, and share everyday life.
+**Latest version:** [Common Ground — Immersive City v1.0](https://github.com/TCXM/MEDIART-213-week-1/releases/latest) · November 17, 2026.
 
-## View the assignment
+## View the prototype
 
-Download the repository and open **`index.html`** in a browser. No installation is needed. GitHub's file view only displays the source code.
+Download this repository and open **`index.html`** in a modern browser. No installation or build step is needed.
 
-Suggested order:
+The city fills the screen. Drag to wander, scroll to zoom, and select one of six places. Try serving breakfast, folding fabric, calling a shuttle, watering plants, starting music, or sending a helping hand. Switch to night to see the city lights.
 
-1. **`index.html` — My vision:** the original personal vision.
-2. **`day.html` — An ordinary day:** three illustrated human–robot scenes.
-3. **`community.html` — Our community:** shared spaces and an interactive p5.js neighborhood. Try the delivery buttons and expandable notices.
+Longer stories are tucked under **Field notes**; **Places** opens the location directory. Touch gestures, keyboard controls, and a motion toggle are also available.
 
-To start directly with the new assignment, open **`day.html`**.
+Names stay quiet until needed: hover near a shop to reveal its name, or tap it on touch screens. Landmark names appear when their numbered markers are hovered or keyboard-focused.
 
-**Reflection:** [reflection.md](reflection.md) · 335 words; also readable on the community page.
+Zoom closer to discover **12 little street stories**: a canal café, repair stall, rooftop harvest, drying laundry, book exchange, chess game, market, musician, parcel dock, bus stop, rain garden, and bakery. Select a ✦, or use **Places → Find a little story**. Balconies, shopfronts, bicycles, planting, and solar roofs reward a closer look; zoom reaches 550%.
 
-## Assignment versions
+For a local server, run `python3 -m http.server 8215` in this folder and open http://localhost:8215.
 
-- **Week 1 — Future Vision:** [week-1-future-vision](https://github.com/TCXM/MEDIART-213-week-1/tree/week-1-future-vision)
-- **Week 2 & 3 A2 — Future Telling:** [week-2-3-a2-future-telling](https://github.com/TCXM/MEDIART-213-week-1/tree/week-2-3-a2-future-telling)
+## Earlier assignments
 
-Each tag preserves the corresponding assignment version. Week 1 uses its original subfolder; the current site is at the repository root.
+- [Week 1 — Future Vision](https://github.com/TCXM/MEDIART-213-week-1/tree/week-1-future-vision)
+- [Week 2 & 3 A2 — Future Telling](https://github.com/TCXM/MEDIART-213-week-1/tree/week-2-3-a2-future-telling)
 
-## Notes
+These tags preserve the earlier submissions. The current single-page atlas is a new prototype.
 
-Built with HTML, CSS Flexbox, and p5.js. The scenes and noticeboard are fictional. Illustrations and the sketch were created with coding assistance. See [image credits](assets/images/SOURCES.md), [p5.js license](assets/vendor/p5-LICENSE.txt), and [requirement check](docs/requirements.md).
+Built with HTML, CSS, and locally bundled p5.js. Original procedural illustrations and coding assistance; imagined scenarios, not predictions or robot simulations. Google Fonts is optional; system fonts work offline.
+
+[Design reflection](reflection.md) · [Implementation](docs/implementation.md) · [Assignment scope](docs/requirements.md) · [p5.js license](assets/vendor/p5-LICENSE.txt)

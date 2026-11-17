@@ -1,33 +1,32 @@
-# Week 2 & 3 — Future Telling
+# Common Ground — implementation
 
-Implementation and preparation notes. All file paths below are relative to the repository root. For the instructor's viewing guide, see [README](../README.md).
+The current prototype is a single-page, interactive city atlas. Open root `index.html`, or serve the repository with `python3 -m http.server 8215`.
 
-**Project:** Living Together: people and robots in an ordinary neighborhood in 2040.
+## File map
 
-## Open the site
+- `index.html`: city directory, map controls, native scene and about dialogs.
+- `style.css`: responsive Flexbox layouts, dark teal palette, mobile landmark badges.
+- `immersive.css`: full-screen city, floating controls, popover directory, image-first scene layout.
+- `city-data.js`: six imagined places, coordinates, narratives, and three moments per scene.
+- `city-art.js`: original isometric building, people, robot, and scene drawing primitives.
+- `city-life.js`: twelve positioned street/rooftop vignettes, short stories, shopfronts, balconies, bicycles, lamps, and roof details.
+- `city.js`: p5.js instances, cached ground, depth-sorted vector buildings and vignettes, camera gestures, dialog navigation, and session progress.
+- `assets/vendor/p5.min.js`: local p5.js 1.11.11; license alongside it.
 
-Open `index.html` in a browser. No build step or backend is needed.
-The three pages are linked through their shared navigation:
+## Interaction
 
-- `index.html`: the original personal Future Vision, preserved with an entrance to the new project.
-- `day.html`: new page 1, three scenes from an imagined day.
-- `community.html`: new page 2, shared spaces, a fictional community noticeboard, and open design questions.
+Drag/pinch on touch screens; drag/scroll with a mouse. Focus the map for arrow-key pan, +/− zoom, and Home reset. Native buttons provide alternative access to every scene. Escape closes dialogs and returns focus.
 
-## Reflection
+Scene action buttons play a five-second visual sequence and leave a result in the illustration; paused mode shows the result immediately. Field notes optionally expose the three narrative moments. These are illustrative animations, not task simulations. Day/night changes the atmosphere and lights. Residents, robots, aerial couriers, and a water taxi animate the atlas. Routes and motion can be toggled. Reduced-motion preferences start playback paused; hidden tabs and dialogs suspend background animation.
 
-`reflection.md` contains the 250–400-word English assignment reflection. It is also linked from the community page. Read and personalize it before submitting.
+Explored places are stored in this tab's `sessionStorage`; there are no accounts, backend, or submissions. Scene IDs support URL fragments such as `#garden` on initial load. Fonts may load from Google; all drawing code and p5.js are local. Without JavaScript, the page links to the reflection. If p5.js fails, the directory still opens scene narratives.
 
-## Design and implementation
+## Street-scale exploration
 
-- `style.css` retains the first assignment's visual style and Google Fonts imports.
-- `future.css` adds Flexbox navigation, scene layouts, shared spaces, notices, and mobile styles.
-- Native HTML `details` / `summary` elements provide keyboard-accessible interactions without JavaScript.
-- `community-sketch.js` uses p5.js to draw a small neighborhood scene. HTML buttons choose a delivery destination and pause/play motion. Reduced-motion preferences start it paused; the SVG remains a fallback without JavaScript. This is an illustration, not a robot simulator.
-- p5.js 1.11.11 is stored locally in `assets/vendor/p5.min.js`, with its LGPL license in `assets/vendor/p5-LICENSE.txt`. Source: https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js
-- Images, illustrations, HTML, and CSS live inside this folder. Google Fonts needs an internet connection; system font fallbacks work offline.
-- The five original SVG illustrations depict imagined scenes, not working systems or experimental results. The day page uses three scene-and-caption pairs; the community page uses illustrated place links and an online-to-offline visual sequence. Illustration and photo credits are in `assets/images/SOURCES.md`.
-- The noticeboard is a static scenario, not a functioning service. No real signups or submissions are collected.
+Shop names are proximity labels, not permanent canvas signs. Each frame projects sign anchors into screen coordinates and shows only the nearest name within 58 CSS pixels of the pointer. The lightweight label stays screen-sized as the city zooms. Mouse leave, dragging, zooming, and Escape dismiss it; a touch tap reveals it without confusing a pan or pinch with a tap. Landmark buttons retain accessible names while their visual names appear only on hover or keyboard focus.
 
-Submit the complete design folder and reflection using the method specified by the instructor. A GitHub push alone does not submit the assignment on the course platform.
+Street details and small-story buttons fade in across 120–220% zoom using a smoothstep curve and a short time-based catch-up. Zooming out reverses the fade; buttons also fade near viewport edges and become interactive only above 30% opacity. Input-driven fades finish even when ambient motion is paused. Reduced-motion mode retains gradual zoom-dependent opacity but omits timed easing.
 
-See [requirements check](requirements.md) for the assignment and rubric check, including the remaining submission steps.
+Selecting a story centers its miniature and opens a short, nonmodal caption; Escape closes it. The Places menu also provides sequential access to all twelve stories without canvas targeting. Main landmark labels recede while a small story is selected; nearby foreground buildings become translucent to reveal the selected miniature. The zoom range is 65–550%; zoomed-in buildings stay vector-sharp, with offscreen features culled. Vignettes reserve space in the city grid and are depth-sorted with buildings and major landmarks. Ground geometry is cached separately. Street details are fictional rather than a geographic map or a full city simulation.
+
+Earlier images remain under `assets/images/` with their credits; the atlas does not use them. Earlier assignment implementations and documentation are preserved by Git tags.

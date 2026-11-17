@@ -1,150 +1,107 @@
 <!DOCTYPE html>
-<html lang="en-us">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Future Vision — A Work in Progress</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0c181b">
+    <meta name="description" content="Explore Common Ground, an imagined city in 2040 where people and robots build everyday life together.">
+    <title>Common Ground — An atlas of possible futures</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="future.css">
-
+    <link rel="stylesheet" href="immersive.css">
+    <script src="assets/vendor/p5.min.js" defer></script>
+    <script src="city-data.js" defer></script>
+    <script src="city-art.js" defer></script>
+    <script src="city-life.js" defer></script>
+    <script src="city.js" defer></script>
 </head>
-
 <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <nav class="site-nav" aria-label="Main navigation">
-        <a class="wordmark" href="index.html">Living Together<span>FIELD NOTES FROM 2040</span></a>
-        <div class="nav-links">
-            <a href="index.html" aria-current="page">My vision</a>
-            <a href="day.html">An ordinary day</a>
-            <a href="community.html">Our community</a>
-        </div>
-    </nav>
-    <header class="page-header">
-        <p class="eyebrow">MEDIART 213 / FALL 2026</p>
-        <h1>My future,<br><em>a work in progress.</em></h1>
-        <p class="intro">A few thoughts on the person I want to become and the everyday life I hope to build.</p>
-        <a class="read-link" href="#reflections">A note to my future self <span aria-hidden="true">↘</span></a>
-        <figure class="hero-photo">
-            <img src="assets/images/desk.jpg" width="1400" height="933" alt="A laptop and notebook on a wooden desk beside tall windows and green plants." fetchpriority="high">
-            <figcaption>
-                <span>A little space to think, learn, and begin again.</span>
-                <a href="https://unsplash.com/photos/VWcPlbHglYc">Photo: Alesia Kazantceva / Unsplash</a>
-            </figcaption>
-        </figure>
+    <noscript><p class="map-loading">Enable JavaScript to enter the city, or read the <a href="reflection.md">design reflection</a>.</p></noscript>
+    <button class="skip-link" popovertarget="places-panel">Choose a place</button>
+    <header class="topbar">
+        <a class="brand" href="index.html" aria-label="Common Ground home"><span class="brand-mark" aria-hidden="true">◈</span> COMMON GROUND<span class="brand-sub">AN ATLAS OF POSSIBLE FUTURES</span></a>
+        <div class="top-actions"><button id="day-toggle" class="floating-button" type="button" aria-pressed="false">☾ Night</button><button class="floating-button" type="button" popovertarget="places-panel">◈ Places</button><button id="about-button" class="floating-button" type="button" aria-label="About the atlas">?</button></div>
     </header>
-    <main id="main">
-        <aside class="doorway" aria-labelledby="doorway-heading">
-            <div>
-                <p class="eyebrow">A PERSONAL VISION, A SHARED FUTURE</p>
-                <h2 id="doorway-heading">What if we built this life together?</h2>
-                <p>I study robotics. These hopes made me wonder what an ordinary neighborhood might look like when people and robots share everyday tasks.</p>
+
+    <main class="explorer">
+        <aside id="places-panel" class="sidebar" popover aria-label="Choose a place">
+            <div class="intro">
+                <p class="eyebrow">A PLACE WE COULD BUILD</p>
+                <h1 id="intro-title">The future is<br> a place to<br> <em>explore.</em></h1>
+                <p class="intro-copy">A city shared by people and robots.<br> Not a prediction. An invitation.</p>
             </div>
-            <a class="button-link" href="day.html">Step into 2040 <span aria-hidden="true">→</span></a>
+            <div class="district-heading"><h2 id="districts">Choose a place</h2><span id="progress">00 / 06 EXPLORED</span></div>
+            <nav id="district-list" class="district-list" aria-label="Places in the city"></nav>
+            <button id="discover-story" class="floating-button" type="button">Find a little story ↗</button>
+            <div class="sidebar-footer"><span class="tiny-cross" aria-hidden="true">+</span><p>Less about what machines can do.<br>More about what we can do together.</p></div>
+            <noscript><p class="no-script">This atlas needs JavaScript for its interactive map. You can still read the <a href="reflection.md">project reflection</a>.</p></noscript>
         </aside>
-        <section class="reflections" id="reflections" aria-labelledby="reflection-heading">
-            <p class="eyebrow" id="reflection-heading">01 / THE BIG QUESTIONS</p>
-            <article>
-            <h2>
-                How will you begin to dream something no machine can dream?
-            </h2>
-            
-            <p>
-                 I will start with small things from my own life, like a conversation with a friend or a place I miss. I want to make things that feel personal, even if they are not perfect. I do not know exactly what my future will look like yet, and I think that is okay.
-            </p>
-            </article>
-            <article>
-            <h2>
-                If memory is built from shared stories, which dreams do you want written into the past? 
-            </h2>
 
-            <p>
-                 I want to remember learning new skills, making friends, and finishing projects that once felt too difficult. In the future, I hope I can look back and see that I kept trying, even when I was unsure of myself.
-            </p>
-            </article>
-            <article>
-            <h2>What remains of you when all your stories are rewritten?</h2>
-        
-            <p>
-                 I think my values and the way I treat people will still be part of me. Other people may remember things differently, but I can still choose to be curious, honest, and kind.
-            </p>
-            </article>
-            <article>
-            <h2>
-                If you seek to realize your hopes through AI, how will you ensure that it remains faithful to your will?
-            </h2>
-       
-            <p>
-                 I will use AI to help me understand problems and explore ideas, but I will check its answers and make my own decisions. If a suggestion does not match what I want to say, I will change it instead of accepting it right away.
-            </p>
-            </article>
-        </section>
-
-        <section class="everyday" aria-labelledby="everyday-heading">
-            <p class="eyebrow">02 / THE LITTLE THINGS</p>
-            <h2 id="everyday-heading">What a good life might look like.</h2>
-            <p class="section-intro">Not a perfect plan. Just a little more time for the things that matter.</p>
-            <ul class="notes">
-                <li>
-                    <span class="note-label">People</span>
-                    <h3>Which relationships will make your life meaningful and magical. How do you nurture them?</h3>
-                    <p>My family and close friends will make my life meaningful. I want to stay in touch, share meals, and make time to listen when they need someone.</p>
-                </li>
-                <li>
-                    <span class="note-label">Places</span>
-                    <h3>What are the aesthetics of the places that you live your life and how did they come to be that way?</h3>
-                    <p>I imagine living in a small, bright room with plants, books, and a few photos. I want it to feel comfortable rather than fancy, with things I collect over time.</p>
-                </li>
-                <li>
-                    <span class="note-label">Stories</span>
-                    <h3>How do you spend your time? What stories do you seek out - to tell or to listen to?</h3>
-                    <p>I spend a lot of time studying and using my computer, but I also enjoy music and hanging out with friends. I like hearing about everyday experiences, especially how people deal with being a student.</p>
-                </li>
-            </ul>
-
-            <div class="photo-pair">
-                <figure>
-                    <img src="assets/images/friends.jpg" width="1400" height="933" alt="People sharing a meal and talking around a long table." loading="lazy" decoding="async">
-                    <figcaption>
-                        <span>More shared meals. More time together.</span>
-                        <a href="https://unsplash.com/photos/W3SEyZODn8U">Photo: Priscilla Du Preez / Unsplash</a>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="assets/images/cycling.jpg" width="1400" height="933" alt="A silver bicycle with brown handlebars leaning against a dark wall." loading="lazy" decoding="async">
-                    <figcaption>
-                        <span>Taking the slower way, when I can.</span>
-                        <a href="https://unsplash.com/photos/tG36rvCeqng">Photo: Robert Bye / Unsplash</a>
-                    </figcaption>
-                </figure>
+        <section class="map-stage" aria-label="Interactive future city">
+            <div class="map-heading"><span class="eyebrow">CITY ATLAS</span><span class="map-place">COMMON GROUND <span>01—06</span></span></div>
+            <div id="map-canvas" class="map-canvas" tabindex="0" role="group" aria-label="City map. Drag to pan, scroll to zoom. Use arrow keys to pan, plus and minus to zoom, or Home to reset. Select places with the labeled buttons."></div>
+            <div id="map-markers" class="map-markers" role="group" aria-label="City landmarks"></div>
+            <div id="story-markers" class="map-markers" role="group" aria-label="Small stories, revealed when you zoom in"></div>
+            <div id="street-label" class="street-label" hidden><span id="street-label-name"></span></div>
+            <section id="street-story" class="street-story" aria-labelledby="street-title" hidden>
+                <div class="street-caption"><span class="eyebrow">LIFE BETWEEN THE LANDMARKS</span><button id="close-story" type="button" aria-label="Close small story">×</button></div>
+                <h2 id="street-title"></h2><p id="street-copy" aria-live="polite"></p>
+                <button id="next-story" type="button">Wander somewhere else ↗</button>
+            </section>
+            <p id="map-loading" class="map-loading">Drawing a possible future…</p>
+            <div class="compass" aria-hidden="true"><span>N</span><svg viewBox="0 0 52 52"><path d="M26 5L34 35L26 29L18 35Z" fill="currentColor"/><path d="M4 26H48M26 4V48" stroke="currentColor" opacity=".3"/></svg></div>
+            <div class="map-tools" role="group" aria-label="Map controls">
+                <button id="zoom-in" type="button" aria-label="Zoom in">+</button>
+                <output id="zoom-level" aria-label="Zoom level">100%</output>
+                <button id="zoom-out" type="button" aria-label="Zoom out">−</button>
+                <span class="tool-divider"></span>
+                <button id="reset-view" type="button" aria-label="Reset map view">⌖</button>
             </div>
-
-            <ul class="notes">
-                <li>
-                    <span class="note-label">Daily rhythm</span>
-                    <h3>How will it sound? What will the rhythm of your day be?</h3>
-                    <p>I hope my day starts with a quiet breakfast and some music. There will be time for classes and work, but I also want breaks and an evening that does not feel rushed.</p>
-                </li>
-                <li>
-                    <span class="note-label">Movement</span>
-                    <h3>How will you move through the world?</h3>
-                    <p>I want to walk or bike when I can and use public transportation for longer trips. I also hope to visit new places and learn from people whose lives are different from mine.</p>
-                </li>
-                <li>
-                    <span class="note-label">Room to grow</span>
-                    <h3>How do you spend your time? What stories do you seek out, whether to share or to absorb and pass on?</h3>
-                    <p>In the future, I want more time for small creative projects and learning things outside my major. I would like to share what I learn with friends and keep photos or notes of moments I might otherwise forget.</p>
-                </li>
-            </ul>
+            <div class="map-bottom">
+                <p class="map-instructions"><span aria-hidden="true">↔</span> Drag to wander <span>·</span> Zoom in for little stories</p>
+                <div class="map-switches"><button id="routes-toggle" type="button" aria-pressed="true">Routes <span class="switch-dot"></span></button><button id="motion-toggle" type="button" aria-pressed="false">Pause motion <span aria-hidden="true">Ⅱ</span></button></div>
+            </div>
+            <div class="map-key" aria-hidden="true"><span><i class="key-place"></i> PLACES TO EXPLORE</span><span><i class="key-route"></i> SHARED TRANSIT</span><span><i class="key-water"></i> WATER &amp; GREEN SPACE</span></div>
         </section>
-    </main>    
+    </main>
+    <p class="sr-only" id="announcement" role="status"></p>
 
-    <footer>
-        
-        <span>Future vision / MEDIART 213</span>
-        <span>Still figuring it out. And that is okay.</span>
-        
-    </footer>
+    <dialog id="scene-dialog" class="scene-dialog" aria-labelledby="scene-title">
+        <header class="scene-topbar"><span id="scene-location" class="eyebrow"></span><button type="button" class="close-button" id="close-scene" aria-label="Close scene and return to map">Back to atlas <span aria-hidden="true">×</span></button></header>
+        <div class="scene-layout">
+            <div class="scene-visual">
+                <div class="visual-label"><span id="scene-time"></span><span>FIELD NOTES / 2040</span></div>
+                <div id="scene-canvas" role="img" aria-label="Illustrated future scene"></div>
+                <div class="scene-playback"><span id="moment-label">01 / ARRIVE</span><button type="button" id="scene-motion" class="text-button">Pause motion</button></div>
+            </div>
+            <article class="scene-story">
+                <p class="eyebrow" id="scene-category"></p>
+                <h2 id="scene-title"></h2>
+                <p id="scene-description" class="scene-description"></p>
+                <button id="scene-action" class="action-button" type="button">Join in →</button>
+                <p id="action-status" role="status">Choose an action to bring this place to life.</p>
+                <details class="scene-notes"><summary>Field notes</summary>
+                <div class="moment-controls" role="group" aria-label="Explore the scene's three moments">
+                    <button type="button" data-moment="0" aria-pressed="true">01 <span>Arrive</span></button>
+                    <button type="button" data-moment="1" aria-pressed="false">02 <span>Join in</span></button>
+                    <button type="button" data-moment="2" aria-pressed="false">03 <span>Imagine</span></button>
+                </div>
+                <div class="moment-note" aria-live="polite"><h3 id="moment-title"></h3><p id="moment-copy"></p></div>
+                <div class="scene-question"><span>A QUESTION TO TAKE WITH YOU</span><p id="scene-question"></p></div>
+                </details>
+            </article>
+        </div>
+        <footer class="scene-footer"><span>AN IMAGINED SCENE, NOT A FORECAST.</span><button id="next-place" class="next-button" type="button">Next place <span aria-hidden="true">→</span></button></footer>
+    </dialog>
+
+    <dialog id="about-dialog" class="about-dialog" aria-labelledby="about-title">
+        <button type="button" class="close-button" id="close-about" aria-label="Close about">Close <span aria-hidden="true">×</span></button>
+        <p class="eyebrow">ABOUT THIS EXPLORATION</p>
+        <h2 id="about-title">A city of possibilities.<br>Not a city of answers.</h2>
+        <p>Common Ground imagines how people and robots might share a city in 2040. Each place begins with an ordinary human activity: eating, learning, moving, growing, caring, or simply being together.</p>
+        <p>The map is an invitation to look closer. Select a place, move through three moments, and take a question back into the city.</p>
+        <div class="about-help"><h3>Find your own way</h3><p>Mouse: drag and scroll. Touch: drag and pinch. Keyboard: Tab to a place and press Enter. On the map, use arrow keys, + / −, and Home. Escape returns to the atlas.</p><p>Motion can be paused. Reduced-motion preferences are respected. Your explored places are remembered only for this browser tab's session.</p></div>
+        <a class="reflection-link" href="reflection.md">Read the project reflection ↗</a>
+        <p class="about-credit">MEDIART 213 · A speculative design experiment<br>Original procedural illustrations, HTML, CSS &amp; p5.js. Created with coding assistance.</p>
+    </dialog>
 </body>
-
 </html>
