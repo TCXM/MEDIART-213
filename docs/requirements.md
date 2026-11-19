@@ -1,10 +1,10 @@
-# Assignment versions and prototype scope
+# A2 — Future Telling: Common Ground
 
-## Earlier assignment
+## Assignment versions
 
-The completed three-page **Week 2 & 3 A2 — Future Telling** version, its reflection, and its historical requirement checks are preserved at [`week-2-3-a2-future-telling`](https://github.com/TCXM/MEDIART-213-week-1/tree/week-2-3-a2-future-telling). Week 1 is preserved at `week-1-future-vision`.
+The current immersive city atlas is the **Week 2 & 3 A2 — Future Telling** assignment, identified by [`week-2-3-a2-future-telling`](https://github.com/TCXM/MEDIART-213/tree/week-2-3-a2-future-telling). Week 1 is preserved at `week-1-future-vision`. The earlier three-page A2 draft remains in Git history at `58dbbb8`.
 
-## Current redesign
+## Current A2 scope
 
 At the user's request, the current website replaces that content with a technological-looking city map that visitors can explore to discover human–robot living scenarios.
 
@@ -13,4 +13,4 @@ At the user's request, the current website replaces that content with a technolo
 - Responsive layout, touch gestures, native buttons/dialogs, keyboard alternatives, and optional motion.
 - Concise viewing instructions and a new design reflection.
 
-This is a **single-page prototype**. Scene dialogs are not separate webpages; this redesign does not itself satisfy the earlier brief's “two or more new webpages” requirement. Refer to the tagged assignment when reviewing that deliverable.
+The current implementation is a single-page atlas with scene dialogs. These dialogs are not separate webpages, so the earlier brief's “two or more new webpages” criterion is not established by this implementation.

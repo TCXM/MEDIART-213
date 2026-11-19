@@ -1,6 +1,6 @@
 # Common Ground — implementation
 
-The current prototype is a single-page, interactive city atlas. Open root `index.html`, or serve the repository with `python3 -m http.server 8215`.
+The current A2 assignment is a single-page, interactive city atlas. Open root `index.html`, or serve the repository with `python3 -m http.server 8215`.
 
 ## File map
 
@@ -29,4 +29,4 @@ Street details and small-story buttons fade in across 120–220% zoom using a sm
 
 Selecting a story centers its miniature and opens a short, nonmodal caption; Escape closes it. The Places menu also provides sequential access to all twelve stories without canvas targeting. Main landmark labels recede while a small story is selected; nearby foreground buildings become translucent to reveal the selected miniature. The zoom range is 65–550%; zoomed-in buildings stay vector-sharp, with offscreen features culled. Vignettes reserve space in the city grid and are depth-sorted with buildings and major landmarks. Ground geometry is cached separately. Street details are fictional rather than a geographic map or a full city simulation.
 
-Earlier images remain under `assets/images/` with their credits; the atlas does not use them. Earlier assignment implementations and documentation are preserved by Git tags.
+Earlier images remain under `assets/images/` with their credits; the atlas does not use them. The A2 tag identifies the current atlas; earlier drafts remain in Git history, and Week 1 retains its own tag.

@@ -2,9 +2,9 @@
 
 An interactive atlas of an imagined city in 2040, shared by people and robots.
 
-**Latest version:** [Common Ground — Immersive City v1.0](https://github.com/TCXM/MEDIART-213-week-1/releases/latest) · November 17, 2026.
+**MEDIART 213 · Week 2 & 3 A2: Future Telling**
 
-## View the prototype
+## View the A2 assignment
 
 Download this repository and open **`index.html`** in a modern browser. No installation or build step is needed.
 
@@ -18,12 +18,12 @@ Zoom closer to discover **12 little street stories**: a canal café, repair stal
 
 For a local server, run `python3 -m http.server 8215` in this folder and open http://localhost:8215.
 
-## Earlier assignments
+## Assignment versions
 
-- [Week 1 — Future Vision](https://github.com/TCXM/MEDIART-213-week-1/tree/week-1-future-vision)
-- [Week 2 & 3 A2 — Future Telling](https://github.com/TCXM/MEDIART-213-week-1/tree/week-2-3-a2-future-telling)
+- [Week 1 — Future Vision](https://github.com/TCXM/MEDIART-213/tree/week-1-future-vision)
+- [Week 2 & 3 A2 — Future Telling: Common Ground (current)](https://github.com/TCXM/MEDIART-213/tree/week-2-3-a2-future-telling)
 
-These tags preserve the earlier submissions. The current single-page atlas is a new prototype.
+The current city atlas is the A2 assignment. The A2 tag points to this version; earlier drafts remain in Git history.
 
 Built with HTML, CSS, and locally bundled p5.js. Original procedural illustrations and coding assistance; imagined scenarios, not predictions or robot simulations. Google Fonts is optional; system fonts work offline.
 
