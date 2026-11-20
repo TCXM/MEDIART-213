@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <meta name="description" content="Yuxiao Zhu’s MEDIART 213 midterm class log, documenting Future Vision, Common Ground, and peer critique.">
+    <meta name="theme-color" content="#ffffff">
+    <title>Class Log · Yuxiao Zhu · MEDIART 213</title>
+    <link rel="stylesheet" href="assets/class-log.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to the class log</a>
+    <main id="main" class="page">
+        <header class="page-heading">
+            <p class="course">MEDIART 213 · Fall 2026</p>
+            <h1>Class Log</h1>
+            <p class="heading-details">Yuxiao Zhu · Midterm progress review</p>
+        </header>
+
+        <section id="week-1" class="entry" aria-labelledby="future-vision-title">
+            <p class="week">Week 1</p>
+            <h2 id="future-vision-title">Future Vision</h2>
+            <p>I started with a few ordinary things I wanted more of in the future: time with friends, shared meals, and the freedom to walk or bike when I could. Putting those details next to the larger questions about memory and machines made the page feel more like a note to my future self. The meal is the detail I came back to for A2. It gave me a concrete way to ask who gets to participate in a shared activity.</p>
+            <figure>
+                <img src="assets/images/friends.jpg" alt="People sharing a meal around a long table" width="1400" height="933">
+                <figcaption>The shared meal in the Week 1 photo essay. Photograph by <a href="https://unsplash.com/photos/W3SEyZODn8U">Priscilla Du Preez on Unsplash</a>.</figcaption>
+            </figure>
+            <p>The first page was an HTML and CSS exercise. I grouped the written responses with headings and articles, paired each photograph and its credit in a <code>figure</code>, and linked the introduction to the reflections farther down the same page. The image captions could carry some of the meaning without adding another paragraph to each section.</p>
+        </section>
+
+        <section id="a1" class="entry" aria-labelledby="a1-title">
+            <h2 id="a1-title">A1 · Community Field Research</h2>
+            <p>I spoke with my grandmother, my younger cousin, and my mother about internet use in Taicang, Suzhou. Fiber broadband is available where they live, and they use home Wi-Fi as well as mobile data. None currently uses dial-up. That tells me something about their connection options, but the interviews told me more about what actually mattered when they went online.</p>
+            <p>My grandmother remembered younger family members using computers before she got a smartphone. Now she mainly uses WeChat to talk to family. Small text or a menu that moves after an update can mean asking someone for help. My cousin has always had internet at home and notices the connection most when a game slows down.</p>
+            <p>My mother switches between Wi-Fi and mobile data for errands, payments, and navigation. I’d thought of going online as an activity in itself. For her, it’s often just part of buying something or getting somewhere.</p>
+            <p>A software developer I spoke with described using the web to read documentation, share code, and work with colleagues. He also pointed out that a site can work on a developer’s computer and still be hard to use on someone else’s. I recognized how often I assume a recent device, a fast connection, and comfort reading English. A large download feels different on limited mobile data. If the only copy of an instruction is inside a picture, a screen reader may have no equivalent text to read.</p>
+            <h3>Instructor feedback</h3>
+            <figure class="feedback-quote">
+                <blockquote><p>There is never a default answer to accessibility design; time and testing effort are key to finding a solution.</p></blockquote>
+                <figcaption>Dingyi Xu · Canvas feedback, November 18, 2026</figcaption>
+            </figure>
+            <p>For my own site, I’d start by asking someone unfamiliar with the atlas to open a scene on a phone without coaching. I’d see whether they can read the controls and find the same scene through Places without relying on the map. Those checks would tell me where to spend time before I change the design.</p>
+        </section>
+
+        <section id="a2" class="entry" aria-labelledby="future-telling-title">
+            <p class="week">Weeks 2–3</p>
+            <h2 id="future-telling-title">A2 · Common Ground</h2>
+            <p>Common Ground is the version I chose for my Future Telling assignment and shared with the class. I replaced the three-page draft with an interactive map because I wanted people to choose where to start. The kitchen is now one of six places. Visitors can go straight to the rooftop garden, the workshop, or the care courtyard and piece together the story in their own order.</p>
+            <figure>
+                <img src="assets/class-log-images/common-ground-city.jpg" alt="Isometric view of the finished Common Ground city, with six numbered landmarks, bridges over the river, and rooftop gardens" width="1700" height="860" loading="lazy">
+                <figcaption><strong>Common Ground · Final A2 map.</strong> Six numbered landmarks mark different ways into the city, from the shared kitchen to the care courtyard.</figcaption>
+            </figure>
+            <p><a href="index.html">Explore Common Ground</a></p>
+
+            <h3>From a three-page draft to a map</h3>
+            <p>In <cite>Living Together</cite>, the earlier prototype, visitors followed a day in the neighborhood from breakfast to the workshop. The kitchen showed a small division of work: a robot could lift a heavy pot while a resident still chose the recipe and decided how the food should taste. The map kept that idea. It gave visitors more choice, but it also made the reason for the robot’s help easier to miss.</p>
+            <div class="version-comparison">
+                <figure>
+                    <img src="assets/class-log-images/living-together-breakfast.png" alt="The shared kitchen section of the original A2 page, with the breakfast illustration beside a description of how residents and robots share the work" width="1200" height="804" loading="lazy">
+                    <figcaption><strong>Living Together</strong> · Breakfast opens the day. The text beside the illustration explains why Mr. Chen needs help lifting the pot.</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/class-log-images/common-table.png" alt="The Common Table dialog with an isometric kitchen, a Serve breakfast button, and collapsed Field notes" width="1200" height="1094" loading="lazy">
+                    <figcaption><strong>Common Ground</strong> · The kitchen opens from the map. Serving breakfast is visible right away. The explanation sits under Field notes.</figcaption>
+                </figure>
+            </div>
+            <p>p5.js draws the map and the illustrations. <code>city-data.js</code> holds the scene text and coordinates. When a visitor chooses a landmark, the page opens an HTML dialog with an action and expandable field notes. The Places menu gives visitors a second route to each scene. The map supports keyboard pan and zoom, and the operating system’s reduced-motion preference starts ambient animation paused.</p>
+
+            <section id="delivery-sketch" aria-labelledby="delivery-title">
+                <h3 id="delivery-title">p5.js · Sending the robot to the workshop</h3>
+                <p>In the early prototype, <em>To the workshop</em> is an HTML button. Clicking it changes the robot’s route to a short list of points along the walkway. The p5.js <code>draw()</code> loop moves the robot toward the next point, then removes that point from the route when it arrives.</p>
+                <figure>
+                    <img src="assets/class-log-images/workshop-delivery.png" alt="The workshop button selected and the robot approaching the workshop, with a status line about taking clean towels" width="1200" height="710" loading="lazy">
+                    <figcaption>Browser check of the early prototype. Selecting the workshop highlights the button and shows the delivery status while the robot moves.</figcaption>
+                </figure>
+                <p>One line in <a href="https://github.com/TCXM/MEDIART-213/blob/58dbbb8/community-sketch.js#L159-L170"><code>community-sketch.js</code></a> explains the movement: <code>const step = 80 * dt;</code>. The sketch converts the time since the last frame to seconds, so the robot moves by elapsed time instead of taking the same step on every frame. The canvas shows where it is going. The status line tells you what it is carrying without asking you to read the animation.</p>
+            </section>
+
+            <section id="critique" aria-labelledby="critique-title">
+                <h3 id="critique-title">Class presentation and feedback</h3>
+                <p>I showed Common Ground to the whole class. The discussion gave me ideas I hadn’t considered and pointed out a problem in the map I already had.</p>
+                <ul>
+                    <li><strong>Go beyond the city.</strong> Someone asked what the suburbs and countryside might look like. I’d only drawn everyday life in a city. Adding farmland and a village would let me think about what people and robots might do together somewhere with more open space.</li>
+                    <li><strong>Give places their own sounds.</strong> A classmate suggested adding sound. I’d like to try hearing more of a place as you zoom in: traffic near a road, running water by the river, or a boat horn at the waterfront.</li>
+                    <li><strong>Check how people and buildings overlap.</strong> During the presentation, a classmate pointed out that a house covered a person where the person should have been visible. It might be a drawing-order issue. I’d first go back to the same spot and check what the map draws in front as the person moves past the house.</li>
+                </ul>
+                <h4>Peer reviews</h4>
+                <p>One written review singled out the kitchen but pointed out that visitors might miss the project’s premise if they never open About or Field notes. Another suggestion from class was to show a task from a worker robot’s point of view. To see where more context would help, I’d ask a first-time visitor to open one scene and tell me what the robot does there. I’d note whether they use the map or Places, and whether they find Field notes on their own.</p>
+                <p>Reviewing other projects gave me two examples of why that matters. In <cite>Botclub</cite>, clicking Mochi’s avatar opened Nova’s profile. In <cite>The Soft Escape</cite>, a pond rippled when clicked, but the hint was easy to miss.</p>
+            </section>
+
+            <section id="ai-process" aria-labelledby="ai-process-title">
+                <h3 id="ai-process-title">Designing with AI</h3>
+                <p>My first attempt with a broad AI prompt gave me a polished page with a familiar layout and a lot of text. I could read about the future, but there was very little to do. The page looked finished before I’d figured out what I wanted visitors to experience.</p>
+                <p>I came up with Common Ground as a city you could explore. I chose the map format and decided that each place should show something people and robots might do together. Then I directed the work with an AI coding assistant to turn that idea into a website. One example is the kitchen. I wanted visitors to be able to serve breakfast and see the scene change before they opened the notes. Once I had a specific interaction in mind, I could judge whether the code supported the experience I wanted.</p>
+                <p>For this log, I wanted the final city to come first. The initial selection of images focused on earlier versions, so I asked to put a browser screenshot of the finished map at the top of the A2 entry. That way readers can see what I made before following the changes that led to it.</p>
+            </section>
+        </section>
+
+        <section id="midterm-review" class="entry" aria-labelledby="midterm-title">
+            <p class="week">Week 4 · November 20, 2026</p>
+            <h2 id="midterm-title">Midterm progress review</h2>
+            <p>Common Ground is now the version I’m presenting. The six landmarks give visitors several ways in, but the class feedback made me wonder how much of the story they pick up on their own. My next check is to watch someone open the kitchen without instructions and see what they understand before opening Field notes.</p>
+            <p>The building that covered a person during the presentation is still an open issue. I have the observation and a possible explanation about the drawing order. The next step is to reproduce the overlap at the same location before changing the code.</p>
+        </section>
+
+        <section id="credits" class="entry credits" aria-labelledby="credits-title">
+            <h2 id="credits-title">Sources and credits</h2>
+            <p>Common Ground uses p5.js. Project files: <a href="https://github.com/TCXM/MEDIART-213/tree/week-1-future-vision">Week 1</a> and <a href="https://github.com/TCXM/MEDIART-213/tree/week-2-3-a2-future-telling">A2</a>. The <a href="https://github.com/TCXM/MEDIART-213/blob/main/assets/images/SOURCES.md">image credits</a> identify the Week 1 photographs and the speculative illustrations from the early A2 prototype. The <a href="https://github.com/TCXM/MEDIART-213/blob/main/reflection.md">A2 reflection</a> describes the project and records coding assistance.</p>
+            <p>The Class Log draws on my field research, project decisions, and classroom reflections. I directed what to include and how to present it. I used ChatGPT for help organizing and wording the log and browser feedback, assembling the page, and capturing screenshots.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a href="index.html">← Back to the atlas</a>
+    </footer>
+</body>
+</html>
